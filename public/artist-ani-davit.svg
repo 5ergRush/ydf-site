@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder portrait for Ani and Davit</title>
+  <desc id="desc">An abstract portrait placeholder showing a dancing couple.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="60" x2="700" y2="940" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e3d8cf"/>
+      <stop offset="1" stop-color="#d1c5bb"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect x="56" y="56" width="688" height="888" rx="40" fill="#ffffff" fill-opacity=".16"/>
+  <circle cx="304" cy="332" r="108" fill="#d0a181"/>
+  <circle cx="514" cy="346" r="104" fill="#b88567"/>
+  <path d="M214 230c28-60 82-98 134-98 74 0 130 58 130 132 0 42-16 76-42 102-30-48-84-80-146-80-28 0-54 6-76 18z" fill="#2f241f"/>
+  <path d="M434 246c30-66 90-108 152-108 78 0 138 60 138 138 0 48-20 86-52 112-28-56-88-94-156-94-30 0-56 8-82 22z" fill="#4e372d"/>
+  <path d="M134 872c24-190 134-302 250-302 104 0 202 112 218 302H134z" fill="#44312b"/>
+  <path d="M346 872c20-178 122-288 236-288 102 0 190 110 204 288H346z" fill="#7a5748"/>
+</svg>

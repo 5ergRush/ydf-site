@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder portrait for Sol and Mateo</title>
+  <desc id="desc">An abstract portrait placeholder showing a dancing couple.</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="680" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f6dec7"/>
+      <stop offset="1" stop-color="#ead4c4"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect x="56" y="56" width="688" height="888" rx="40" fill="#ffffff" fill-opacity=".16"/>
+  <circle cx="290" cy="340" r="110" fill="#d89b73"/>
+  <circle cx="500" cy="322" r="104" fill="#b7795a"/>
+  <path d="M194 244c24-62 84-104 142-104 72 0 132 56 132 132 0 50-20 86-48 112-20-66-78-112-144-112-30 0-58 10-82 28z" fill="#3c2b22"/>
+  <path d="M420 244c26-68 84-110 148-110 78 0 138 58 138 136 0 50-22 90-52 118-18-72-80-122-154-122-28 0-54 8-80 24z" fill="#2b1d17"/>
+  <path d="M140 870c18-178 132-294 252-294 108 0 212 116 230 294H140z" fill="#4a342a"/>
+  <path d="M324 870c20-196 128-320 246-320 108 0 202 124 214 320H324z" fill="#6a4b3b"/>
+</svg>

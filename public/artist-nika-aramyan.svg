@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder portrait for Nika Aramyan</title>
+  <desc id="desc">An abstract portrait placeholder showing a single instructor portrait.</desc>
+  <defs>
+    <linearGradient id="bg" x1="110" y1="40" x2="700" y2="950" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#eed6bc"/>
+      <stop offset="1" stop-color="#dcc3a8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect x="56" y="56" width="688" height="888" rx="40" fill="#ffffff" fill-opacity=".16"/>
+  <circle cx="400" cy="334" r="134" fill="#c48d65"/>
+  <path d="M234 264c24-96 98-160 180-160 96 0 174 76 174 172 0 60-28 114-76 146-28-92-106-156-202-156-28 0-54 6-76 16z" fill="#30231d"/>
+  <path d="M202 876c24-204 126-320 198-320 78 0 182 116 202 320H202z" fill="#544034"/>
+</svg>

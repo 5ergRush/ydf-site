@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder portrait for DJ Mare</title>
+  <desc id="desc">An abstract portrait placeholder showing a single DJ portrait.</desc>
+  <defs>
+    <linearGradient id="bg" x1="84" y1="54" x2="712" y2="942" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c9ddd9"/>
+      <stop offset="1" stop-color="#b6cfca"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect x="56" y="56" width="688" height="888" rx="40" fill="#ffffff" fill-opacity=".16"/>
+  <circle cx="400" cy="336" r="134" fill="#bf8a66"/>
+  <path d="M250 252c18-86 90-148 168-148 96 0 172 74 172 170 0 68-36 126-96 154-10-102-92-184-194-184-18 0-34 2-50 8z" fill="#21302d"/>
+  <path d="M220 320c22-64 88-108 180-108 90 0 152 42 180 104" stroke="#1e2725" stroke-width="24" stroke-linecap="round"/>
+  <rect x="194" y="308" width="56" height="150" rx="28" fill="#1e2725"/>
+  <rect x="550" y="308" width="56" height="150" rx="28" fill="#1e2725"/>
+  <path d="M194 876c22-204 126-324 206-324 82 0 188 120 208 324H194z" fill="#36534d"/>
+</svg>

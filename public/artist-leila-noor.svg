@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder portrait for Leila Noor</title>
+  <desc id="desc">An abstract portrait placeholder showing a single instructor portrait.</desc>
+  <defs>
+    <linearGradient id="bg" x1="100" y1="40" x2="690" y2="940" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e1d1d9"/>
+      <stop offset="1" stop-color="#cfc0cb"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect x="56" y="56" width="688" height="888" rx="40" fill="#ffffff" fill-opacity=".16"/>
+  <circle cx="400" cy="332" r="136" fill="#cc9d83"/>
+  <path d="M250 264c20-98 92-160 176-160 92 0 168 72 168 170 0 68-34 122-88 152-14-98-94-174-194-174-22 0-42 4-62 12z" fill="#362626"/>
+  <path d="M190 876c26-212 132-332 210-332h2c82 0 188 120 208 332H190z" fill="#5b4145"/>
+</svg>

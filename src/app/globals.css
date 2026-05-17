@@ -1,26 +1,205 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #120014;
+  --foreground: #ffffff;
+  --surface: #2a005f;
+  --surface-muted: #3a0a6d;
+  --border: rgb(255 255 255 / 0.16);
+  --muted: rgb(255 255 255 / 0.72);
+  --brand: #ff005c;
+  --brand-deep: #ff5e00;
+  --accent: #ffd166;
+  --orange: #ffb000;
+  --deep-orange: #ff5e00;
+  --pink-red: #ff005c;
+  --magenta: #ff2d9a;
+  --purple: #a100ff;
+  --deep-violet: #2a005f;
+  --near-black: #120014;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-brand: var(--brand);
+  --color-brand-deep: var(--brand-deep);
+  --color-accent: var(--accent);
+  --color-orange: var(--orange);
+  --color-deep-orange: var(--deep-orange);
+  --color-pink-red: var(--pink-red);
+  --color-magenta: var(--magenta);
+  --color-purple: var(--purple);
+  --color-deep-violet: var(--deep-violet);
+  --color-near-black: var(--near-black);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-fraunces);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  background: var(--near-black);
 }
 
 body {
-  background: var(--background);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 8%, rgb(255 176 0 / 0.24), transparent 30rem),
+    radial-gradient(circle at 85% 10%, rgb(255 45 154 / 0.22), transparent 28rem),
+    radial-gradient(circle at 50% 55%, rgb(161 0 255 / 0.2), transparent 38rem),
+    linear-gradient(135deg, #120014 0%, #2a005f 50%, #120014 100%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: rgb(255 209 102 / 0.35);
+  color: #ffffff;
+}
+
+.brand-gradient {
+  background-image: linear-gradient(135deg, #ffb000 0%, #ff5e00 34%, #ff005c 68%, #ff2d9a 100%);
+}
+
+.brand-gradient-night {
+  background-image: linear-gradient(135deg, #ff2d9a 0%, #a100ff 48%, #2a005f 100%);
+}
+
+.brand-gradient-text {
+  background-image: linear-gradient(135deg, #ffd166 0%, #ffb000 25%, #ff005c 62%, #ff2d9a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.brand-glass {
+  border: 1px solid rgb(255 255 255 / 0.16);
+  background: linear-gradient(145deg, rgb(255 255 255 / 0.13), rgb(255 255 255 / 0.05));
+  box-shadow: 0 24px 80px rgb(18 0 20 / 0.38);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+
+.brand-glow {
+  box-shadow:
+    0 0 0 1px rgb(255 255 255 / 0.12),
+    0 22px 70px rgb(255 0 92 / 0.24),
+    0 10px 38px rgb(255 176 0 / 0.12);
+}
+
+.sparkle-field {
+  position: relative;
+  isolation: isolate;
+}
+
+.sparkle-field::before,
+.sparkle-field::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.sparkle-field::before {
+  background-image:
+    radial-gradient(circle, rgb(255 255 255 / 0.86) 0 1px, transparent 1.5px),
+    radial-gradient(circle, rgb(255 209 102 / 0.7) 0 1px, transparent 1.5px);
+  background-position:
+    8% 18%,
+    72% 12%;
+  background-size:
+    7.5rem 7.5rem,
+    10rem 10rem;
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 82%);
+  mask-image: linear-gradient(to bottom, black, transparent 82%);
+  opacity: 0.48;
+}
+
+.sparkle-field::after {
+  background:
+    radial-gradient(ellipse at 18% 16%, rgb(255 176 0 / 0.44), transparent 22rem),
+    radial-gradient(ellipse at 88% 12%, rgb(255 45 154 / 0.42), transparent 24rem),
+    radial-gradient(ellipse at 72% 82%, rgb(161 0 255 / 0.3), transparent 26rem);
+}
+
+.curve-lines {
+  position: absolute;
+  inset: auto -8rem -10rem auto;
+  width: min(34rem, 78vw);
+  aspect-ratio: 1;
+  border: 1px solid rgb(255 209 102 / 0.22);
+  border-radius: 9999px;
+  transform: rotate(-18deg);
+  pointer-events: none;
+}
+
+.curve-lines::before,
+.curve-lines::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgb(255 255 255 / 0.14);
+  border-radius: inherit;
+}
+
+.curve-lines::before {
+  inset: 2.25rem;
+}
+
+.curve-lines::after {
+  inset: 4.5rem;
+  border-color: rgb(255 45 154 / 0.22);
+}
+
+.festival-ticket {
+  position: relative;
+  overflow: hidden;
+}
+
+.festival-ticket::before,
+.festival-ticket::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background: var(--near-black);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.12);
+  transform: translateY(-50%);
+}
+
+.festival-ticket::before {
+  left: -1rem;
+}
+
+.festival-ticket::after {
+  right: -1rem;
+}
+
+.premium-border {
+  border-color: rgb(255 209 102 / 0.72);
+  box-shadow:
+    0 0 0 1px rgb(255 209 102 / 0.22),
+    0 26px 80px rgb(255 209 102 / 0.16),
+    0 18px 70px rgb(255 0 92 / 0.18);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sparkle-field::before {
+    animation: sparkle-drift 14s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes sparkle-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0.6rem, -0.8rem, 0);
+  }
 }

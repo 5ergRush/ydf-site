@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder portrait for Emma and Jules</title>
+  <desc id="desc">An abstract portrait placeholder showing a dancing couple.</desc>
+  <defs>
+    <linearGradient id="bg" x1="104" y1="54" x2="700" y2="944" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e9d9de"/>
+      <stop offset="1" stop-color="#d7c4cb"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect x="56" y="56" width="688" height="888" rx="40" fill="#ffffff" fill-opacity=".16"/>
+  <circle cx="292" cy="334" r="108" fill="#d2a086"/>
+  <circle cx="506" cy="330" r="106" fill="#b9876e"/>
+  <path d="M198 246c26-70 86-114 150-114 74 0 132 58 132 132 0 48-20 88-50 116-18-68-80-116-152-116-28 0-54 8-80 22z" fill="#4c3037"/>
+  <path d="M430 248c22-64 84-108 144-108 78 0 138 60 138 138 0 44-18 82-48 110-24-58-82-98-150-98-28 0-56 8-84 22z" fill="#2d2025"/>
+  <path d="M136 874c24-188 132-302 246-302 106 0 204 114 222 302H136z" fill="#69454f"/>
+  <path d="M354 874c20-178 126-292 240-292 102 0 190 114 202 292H354z" fill="#8b606a"/>
+</svg>
