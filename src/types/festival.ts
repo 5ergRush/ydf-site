@@ -29,6 +29,40 @@ export type PageSection = PageIntro & {
   ctaHref?: string;
 };
 
+export type LineupHitArea = {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+};
+
+export type LineupSpotlight = {
+  beamStartX: number;
+  beamStartY: number;
+  targetX: number;
+  targetY: number;
+  beamTopWidth: number;
+  beamBottomWidth: number;
+  poolWidth: number;
+  poolHeight: number;
+  labelX: number;
+  labelY: number;
+  labelPlacement?: "left" | "right" | "top" | "bottom";
+};
+
+export type LineupHotspot = {
+  hitArea: LineupHitArea;
+  spotlight: LineupSpotlight;
+  zIndex?: number;
+};
+
+export type LineupPoster = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+};
+
 export type HeroContent = PageIntro & {
   primaryCta: NavItem;
   secondaryCta: NavItem;
@@ -70,6 +104,7 @@ export type Artist = {
   styles: string[];
   excerpt: string;
   description: string[];
+  hotspot: LineupHotspot;
 };
 
 export type Venue = {
