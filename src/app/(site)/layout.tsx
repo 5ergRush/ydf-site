@@ -1,12 +1,15 @@
 import Link from "next/link";
 import { Container } from "@/components/container";
 import { festivalInfo } from "@/data/festival";
+import { getOptionalAuth } from "@/lib/auth";
 
-export default function SiteLayout({
+export default async function SiteLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const auth = await getOptionalAuth();
+
   return (
     <div className="relative flex min-h-screen flex-col overflow-hidden">
       <header className="sticky top-0 z-40 border-b border-white/10 bg-near-black/70 backdrop-blur-xl">
@@ -43,6 +46,12 @@ export default function SiteLayout({
                 {item.label}
               </Link>
             ))}
+            <Link
+              href={auth ? "/account" : "/login"}
+              className="rounded-full border border-white/10 bg-white/5 px-4 py-2 transition-all hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/10 hover:text-white"
+            >
+              {auth ? "My account" : "Sign in"}
+            </Link>
           </nav>
         </Container>
       </header>
@@ -53,7 +62,9 @@ export default function SiteLayout({
         <Container className="grid gap-10 py-12 md:grid-cols-[1.6fr_1fr_1fr]">
           <div className="space-y-4">
             <p className="font-display text-3xl font-black">
-              <span className="brand-gradient-text">{festivalInfo.shortName}</span>{" "}
+              <span className="brand-gradient-text">
+                {festivalInfo.shortName}
+              </span>{" "}
               {festivalInfo.name}
             </p>
             <p className="max-w-md text-sm leading-7 text-white/70">
@@ -101,14 +112,30 @@ export default function SiteLayout({
                   <a
                     href={social.href}
                     target="_blank"
-                  rel="noreferrer"
-                  aria-label={`${social.label} for ${festivalInfo.name}`}
-                  className="text-white/76 transition-colors hover:text-accent"
-                >
-                  {social.label}
-                </a>
+                    rel="noreferrer"
+                    aria-label={`${social.label} for ${festivalInfo.name}`}
+                    className="text-white/76 transition-colors hover:text-accent"
+                  >
+                    {social.label}
+                  </a>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/privacy"
+                  className="text-white/76 transition-colors hover:text-accent"
+                >
+                  Privacy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms"
+                  className="text-white/76 transition-colors hover:text-accent"
+                >
+                  Terms
+                </Link>
+              </li>
             </ul>
           </div>
         </Container>

@@ -9,12 +9,12 @@ import type {
 const SPREADSHEET_ID = "16ZaBkmSW98BgsXhd528nZY4fI_1a-8uVfyp3QMITQw0";
 const SHEET_NAME = "Pricelist";
 const SHEET_RANGE = "A1:E17";
-const CURRENCIES: PricingCurrency[] = ["AMD", "EURO", "RUBLY", "AED"];
+const CURRENCIES: PricingCurrency[] = ["AMD", "EUR", "RUB", "AED"];
 
 const CURRENCY_PREFIX: Record<PricingCurrency, string> = {
   AMD: "֏",
-  EURO: "€",
-  RUBLY: "₽",
+  EUR: "€",
+  RUB: "₽",
   AED: "AED ",
 };
 

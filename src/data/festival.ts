@@ -7,8 +7,8 @@ export const festivalInfo: FestivalInfo = {
     "A bachata-focused summer festival of workshops, socials, and late-night magic in Yerevan.",
   dates: "July 9-13, 2026",
   location: "Yerevan, Armenia",
-  siteUrl: "https://ydf-festival.example",
-  contactEmail: "hello@ydf-festival.example",
+  siteUrl: "https://yerevandancefestival.com",
+  contactEmail: "info@yerevandancefestival.com",
   navigation: [
     { label: "Home", href: "/" },
     { label: "Lineup", href: "/lineup" },
@@ -36,7 +36,8 @@ export const festivalInfo: FestivalInfo = {
   },
   about: {
     eyebrow: "Festival overview",
-    title: "Built for bachata dancers who want depth in class and heat on the social floor.",
+    title:
+      "Built for bachata dancers who want depth in class and heat on the social floor.",
     description:
       "Expect a balanced mix of technique labs, musical partnerwork, warm socials, and late-night rooms spread across spaces that each carry a different part of the YDF rhythm.",
     highlights: [
@@ -68,10 +69,9 @@ export const festivalInfo: FestivalInfo = {
     title: "Ready to shape your Yerevan dance week?",
     description:
       "Start with the lineup, review the roadmap, then pick the pass that matches how much bachata energy you want from day classes to sunrise sets.",
-    note:
-      "Group requests, partner questions, and community inquiries can be handled manually before any checkout flow is introduced.",
+    note: "Group requests, partner questions, and community inquiries can be handled manually before any checkout flow is introduced.",
     primaryCtaLabel: "Contact the team",
-    primaryCtaHref: "mailto:hello@ydf-festival.example",
+    primaryCtaHref: "mailto:info@yerevandancefestival.com",
     secondaryCtaLabel: "View pricing",
     secondaryCtaHref: "/pricing",
     contactHeading: "Contact",

@@ -1,4 +1,5 @@
 <!-- BEGIN:nextjs-agent-rules -->
+
 # This is NOT the Next.js you know
 
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
@@ -10,7 +11,9 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 This repository is the public website for Yerevan Dance Festival. The current edition is bachata-only and the site is a static/public marketing and information site for now.
 
-Future content direction is to use Google Sheets as a lightweight CMS/database, with typed data structures in the app mapping cleanly to spreadsheet tabs.
+Google Sheets is a lightweight editorial CMS. Supabase PostgreSQL and Auth are
+the source of truth for accounts, products, prices, purchases, roles, and audit
+records.
 
 ## Tech Stack
 
@@ -27,6 +30,10 @@ Future content direction is to use Google Sheets as a lightweight CMS/database, 
 - `/lineup` - bachata artists
 - `/venues` - currently used as the Roadmap page
 - `/pricing` - passes and pricing
+- `/register` and `/login` - account authentication
+- `/account` - protected personal space
+- `/admin` - protected volunteer/staff/admin dashboard
+- `/privacy` and `/terms` - account policies
 
 Do not break or rename these routes unless explicitly asked.
 
@@ -47,6 +54,9 @@ See [docs/deployment.md](docs/deployment.md) for deployment notes.
 - [docs/schedule-architecture.md](docs/schedule-architecture.md)
 - [docs/deployment.md](docs/deployment.md)
 - [docs/content-guidelines.md](docs/content-guidelines.md)
+- [docs/account-system.md](docs/account-system.md)
+- [docs/supabase-setup.md](docs/supabase-setup.md)
+- [docs/backup-and-exit.md](docs/backup-and-exit.md)
 
 ## Brand Rules
 
@@ -88,9 +98,14 @@ This edition is bachata-only.
 
 See [docs/content-guidelines.md](docs/content-guidelines.md) for more.
 
-## Google Sheets Direction
+## Data Direction
 
-Google Sheets is the current planned lightweight CMS/database.
+Google Sheets is the editorial CMS for public content. Never store account,
+purchase, payment, QR, or role data in Sheets.
+
+Supabase holds authentication and sensitive operational data. Keep RLS enabled,
+repeat authorization in Server Actions, and never expose the server-only
+`sb_secret_...` key.
 
 Planned tabs:
 

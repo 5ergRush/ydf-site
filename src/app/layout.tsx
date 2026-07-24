@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Manrope } from "next/font/google";
+import { NavigationFeedback } from "@/components/navigation-feedback";
 import { festivalInfo } from "@/data/festival";
 import "./globals.css";
 
@@ -47,6 +48,7 @@ export default function RootLayout({
     >
       <body className="min-h-full font-sans text-foreground">
         {children}
+        <NavigationFeedback />
       </body>
     </html>
   );

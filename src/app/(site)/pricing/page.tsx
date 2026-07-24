@@ -4,7 +4,7 @@ import { PageHero } from "@/components/page-hero";
 import { PricingCard } from "@/components/pricing-card";
 import { SectionTitle } from "@/components/section-title";
 import { festivalInfo } from "@/data/festival";
-import { loadPricingFromGoogleSheet } from "@/data/google-sheets-pricing";
+import { loadPublicPricing } from "@/data/pricing-source";
 import {
   pricingGridSection,
   pricingNotes,
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function PricingPage() {
-  const pricing = await loadPricingFromGoogleSheet();
+  const pricing = await loadPublicPricing();
 
   return (
     <>
@@ -41,8 +41,8 @@ export default async function PricingPage() {
 
           {pricing.error ? (
             <div className="brand-glass rounded-3xl p-5 text-sm leading-7 text-white/76">
-              Live pricing is temporarily unavailable. Showing fallback pricing
-              while the sheet connection recovers.
+              Live catalog pricing is temporarily unavailable. Showing the
+              existing fallback while the connection recovers.
             </div>
           ) : null}
 
@@ -69,7 +69,10 @@ export default async function PricingPage() {
           <div className="brand-glass rounded-[2rem] p-6 sm:p-8">
             <ul className="space-y-4">
               {pricingNotes.map((note) => (
-                <li key={note} className="flex gap-3 text-sm leading-7 text-white/74">
+                <li
+                  key={note}
+                  className="flex gap-3 text-sm leading-7 text-white/74"
+                >
                   <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_14px_rgb(255_209_102_/_0.7)]" />
                   <span>{note}</span>
                 </li>

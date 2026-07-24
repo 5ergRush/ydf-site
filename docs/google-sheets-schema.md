@@ -2,14 +2,16 @@
 
 ## Direction
 
-Google Sheets is the planned lightweight CMS/database for this bachata-only edition of the Yerevan Dance Festival website.
+Google Sheets is the planned lightweight editorial CMS for public festival
+content. It is not the database for accounts, products, prices, purchases,
+payments, roles, QR tokens, or audit records; those are stored in Supabase.
 
 The website should consume machine-readable data, not spreadsheet presentation. Data tabs should avoid merged cells and visual-only meaning.
 
 ## Tabs
 
 - `Artists`
-- `Passes`
+- `Passes` (legacy public-pricing fallback during the Supabase transition)
 - `ScheduleData`
 - `ScheduleVisual`
 - `Roadmap`
@@ -41,7 +43,7 @@ Notes:
 - `excerpt` is for homepage previews.
 - `bio` can be long and should be used on the full lineup page.
 
-## Proposed Passes Schema
+## Legacy Passes Schema
 
 ```txt
 id | slug | name | price | currency | originalPrice | description | benefits | badge | ctaLabel | ctaUrl | sortOrder | isFeatured | isVisible
@@ -52,6 +54,9 @@ Notes:
 - `benefits` may be semicolon-separated if stored in one cell.
 - Do not invent prices or discounts.
 - `isFeatured` can drive highlighted pricing card styling.
+- Do not store participant purchases, payment status, or price snapshots here.
+- The public pricing page prefers active, published Supabase products. This tab
+  remains a temporary fallback until the catalog has been populated.
 
 ## Proposed ScheduleData Schema
 

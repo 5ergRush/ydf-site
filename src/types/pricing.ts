@@ -1,4 +1,4 @@
-export type PricingCurrency = "AMD" | "EURO" | "RUBLY" | "AED";
+export type PricingCurrency = "AMD" | "EUR" | "RUB" | "AED";
 
 export type PricingAmount = {
   currency: PricingCurrency;
@@ -19,6 +19,6 @@ export type PricingItem = {
 
 export type PricingLoadResult = {
   items: PricingItem[];
-  source: "google-sheet" | "fallback";
+  source: "supabase" | "google-sheet" | "fallback";
   error?: string;
 };
